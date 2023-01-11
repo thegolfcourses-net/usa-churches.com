@@ -1,0 +1,1 @@
+document.write('<br><a href="http://www.tkqlhce.com/click-7183249-11329413" target="_top"><img src="http://www.awltovhc.com/image-7183249-11329413" width="305" height="198" alt="" border="0"/></a><br><br>');
