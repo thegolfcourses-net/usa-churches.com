@@ -16,8 +16,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="https://usa-churches.com/favicon.ico" />	
 
 <link rel="canonical" href="https://usa-churches.com/" />
-<link href="https://usa-churches.com/styles.css?1" rel="stylesheet" type="text/css" media="all">
-<link href="https://usa-churches.com/bootstrap.css?8" rel="stylesheet" type="text/css" media="all">
+<link href="styles.css?2" rel="stylesheet" type="text/css" media="all">
+<link href="bootstrap.css?8" rel="stylesheet" type="text/css" media="all">
 <link href="https://usa-churches.com/fonts/stylesheet.css" rel="stylesheet" type="text/css" media="all">
 <link href="https://usa-churches.com/css/enhancedfonts.css" rel="stylesheet" type="text/css" media="all">
 
@@ -32,6 +32,15 @@ window.open(theURL,winName,features);
 
 </script>
 
+<script language="JavaScript" type="text/javascript">
+//--------------- LOCALIZEABLE GLOBALS ---------------
+var d=new Date();
+var monthname=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+//Ensure correct for language. English is "January 1, 2004"
+var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+var YEAR = d.getFullYear();
+//--------------- END LOCALIZEABLE ---------------
+</script>
 
 </head>
 
@@ -2756,7 +2765,7 @@ window.site_url="https://usa-churches.com";
         </div>
       </div>
       <div class="footer-bottom">
-
+Copyright © 2011-<script type="text/javascript">document.write(YEAR)</script> usa-churches.com
 		  <hr>
     </div>
   </div>
