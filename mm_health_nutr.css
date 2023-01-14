@@ -6,7 +6,7 @@ body {
 
 /*color behind header*/	
 td {
-	font:11px Arial, Helvetica, sans-serif;
+	font:18px Arial, Helvetica, sans-serif;
 	/*color:#ffffff;*/
 	word-wrap: none;
 	}
@@ -39,7 +39,7 @@ a:hover {
 
 /*Used for subheader text right at the top underneath the domain name*/
 .tagline 	{
-	font:22px Arial, Helvetica, sans-serif;
+	font: 32px Arial, Helvetica, sans-serif;
 	color: #ffffff;
 	letter-spacing:.2em;
 	border: 2px;
@@ -64,7 +64,7 @@ a:hover {
 
 /*The background color of the tagline*/
 #subHeaderText {
-	background-color:#32405B;
+	/*background-color:#32405B;*/
 	}
 	
 /*This is for the text at the very top, ex. "bars-pubs.com"*/		
