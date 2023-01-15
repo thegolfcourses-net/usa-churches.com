@@ -7,12 +7,25 @@ name="description" content="Cedar Creek Baptist Church in Mount Vernon, Alabama,
 name="keywords" content="Cedar Creek Baptist Church Mount Vernon Alabama  ">
 </meta>
 <link rel="stylesheet" href="../../mm_health_nutr.css" type="text/css" />
+<style type="text/css">
+  only screen and (max-device-width: 790px) {
+    #headerText > td {display: none;}
+    td#logo {display: block; height: 70px;}
+    td#logo > img {position:absolute; left: 0px; top: 0px; width:100%;}
+    #tagline {width: 100%;}
+    #navbar > :first-child {display: none;}
+  #navigation {display: none;} 
+  .cityNames {padding: 20px; font-size:20px;}
+    body > table > tbody > tr > td + td + td + td {display: none;}
+}
+</style>	  
 <script language="JavaScript" type="text/javascript">
 //--------------- LOCALIZEABLE GLOBALS ---------------
 var d=new Date();
 var monthname=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 //Ensure correct for language. English is "January 1, 2004"
 var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+var YEAR = d.getFullYear();
 //---------------   END LOCALIZEABLE   ---------------
 
 </script>
@@ -30,7 +43,7 @@ var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear()
   <tr id="headerText">
     <td rowspan="2"><img src="../../images/header.jpg" alt="Header image" height="101" border="0" /></td>
 
-<td colspan="3" id="logo" align="center" height="50" nowrap="nowrap" valign="middle"><img src="../../logo.jpg"></td>    <td width="234">&nbsp;</td>
+<td colspan="3" id="logo" align="center" height="50" nowrap="nowrap" valign="middle"><img src="../../images/logo.jpg"></td>    <td width="234">&nbsp;</td>
   </tr>
 
   <tr id="subHeaderText">
@@ -172,7 +185,6 @@ var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear()
           <td><a href="../WY/" class="navText">Wyoming</a></td>
         </tr>
       </table>
-    <table><tr><td><a href="http://www.thegolfcourses.net/golfcourses/AL/Alabama.htm"><font size="+1">Golf courses in Alabama</font></a></td></tr></table>
     </td>
     <td width="35">&nbsp;</td>
   <td valign="top" height="1" border="0" />

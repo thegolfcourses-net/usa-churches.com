@@ -7,6 +7,18 @@ name="description" content="Pine Grove Baptist CHURCH in Tuskegee, Alabama, map,
 name="keywords" content="Pine Grove Baptist CHURCH Tuskegee Alabama  ">
 </meta>
 <link rel="stylesheet" href="../../mm_health_nutr.css" type="text/css" />
+<style type="text/css">
+  only screen and (max-device-width: 790px) {
+    #headerText > td {display: none;}
+    td#logo {display: block; height: 70px;}
+    td#logo > img {position:absolute; left: 0px; top: 0px; width:100%;}
+    #tagline {width: 100%;}
+    #navbar > :first-child {display: none;}
+  #navigation {display: none;} 
+  .cityNames {padding: 20px; font-size:20px;}
+    body > table > tbody > tr > td + td + td + td {display: none;}
+}
+</style>	  
 <script language="JavaScript" type="text/javascript">
 //--------------- LOCALIZEABLE GLOBALS ---------------
 var d=new Date();
@@ -16,6 +28,7 @@ var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear()
 var YEAR = d.getFullYear();
 
 //---------------   END LOCALIZEABLE   ---------------
+
 </script>
 <style type="text/css">
 <!--
@@ -26,12 +39,12 @@ var YEAR = d.getFullYear();
 -->
 </style>
 </head>
-<body id="body" onload="LoadMap()" onunload="UnloadMap()">
+<body id="body">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr id="headerText">
-    <td rowspan="2"><img src="../../header.jpg" alt="Header image" height="101" border="0" /></td>
+    <td rowspan="2"><img src="../../images/header.jpg" alt="Header image" height="101" border="0" /></td>
 
-    <td height="61" colspan="3" id="logo" valign="bottom" align="center" style="padding-top: 10px;"><font class="style2">USA Churches</font></td>
+    <td height="61" colspan="3" id="logo" valign="bottom" align="center" style="padding-top: 10px;"><img src="../../images/logo.jpg"></td>
     <td width="234">&nbsp;</td>
   </tr>
 
@@ -158,7 +171,7 @@ var YEAR = d.getFullYear();
         </tr>
         <tr>
           <td><a href="../MI/" class="navText">Michigan</a></td>
-          <td><a href="../dc/Washington.htm" class="navText">Washington DC</a></td>
+          <td><a href="../DC/Washington.htm" class="navText">Washington DC</a></td>
         </tr>
         <tr>
           <td><a href="../MN/" class="navText">Minnesota</a></td>
@@ -191,8 +204,6 @@ var YEAR = d.getFullYear();
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});	  
 	  </script>
-<script type="text/javascript">
-</script>
    </td>
   </tr>
 
@@ -207,101 +218,6 @@ Pine Grove Baptist CHURCH<br> 7936 County Road 40<br> Tuskegee, AL, 36083<br> 33
 <tr>
 <td colspan="2" class="style3">
 
-      <div style="position:relative;width:500px;height:400px;"id="mapDiv"></div>
-	<br>
-      <div style="position:relative;width:500px;" id="mapDiv"></div>
-<font color="black">These maps should accurately pinpoint <strong>Pine Grove Baptist CHURCH in Tuskegee, Alabama</strong> at or near the pushpin icons. In most areas, two maps are available, the bottom one
-being a birdseye view and the top a satellite image. If you're not sure of the accuracy of the location on the map for the church or house of worship
-you're looking for, you can navigate around these maps using your mouse, and view places near this location. Click and drag with your mouse
-anywhere inside the maps to move around. Use the '+' or '-' icons at the upper left to zoom in and out. Addressing is normally perfectly accurate but sometimes
-only approximate. If you think you aren't viewing Pine Grove Baptist CHURCH on the map, move around a bit, perhaps what you're looking for is a little North, East, West, or South
-of the pushpin icon. Click 'road' at the top of the map if you would rather see a regular looking road map.</font><br>
-<br>
-<p> <font class="quote">Have you been to this location?  What do you think?</font><br>
-<div class="fb-comments" data-href="usa-churches.com/churches/AL/8066.htm" data-num-posts="10" data-width="500"></div>
-</p>
-</td>
-<script type="text/javascript" src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.1"></script>
-
-  <script type="text/javascript">
-
-	var map = null;
-	var locname = "Pine Grove Baptist CHURCH"
-	var locAddress = "7936 County Road 40, Tuskegee, AL, 36083";
-	var locLatLong = new VELatLong();
-
-	function LoadMap()
-        {
-
-		map = new VEMap("mapDiv");
-		map.LoadMap();
-		document.getElementById('MSVE_obliqueNotification').innerHTML = "";
-
-   		StartGeocoding(locAddress);
-
-		map.AttachEvent("onobliqueenter", LoadMapB);
-	}
-
-	function LoadMapB()
-        {
-		map = new VEMap("mapDiv2");
-		map.LoadMap(locLatLong, 0, VEMapStyle.BirdseyeHybrid);
-		PushPin();
-        }
-
-
-	function StartGeocoding( address )
-	{
-		map.Find(null,    // what
-              		address, // where
-              		null,    // VEFindType (always VEFindType.Businesses)
-              		null,    // VEShapeLayer (base by default)
-              		null,    // start index for results (0 by default)
-              		null,    // max number of results (default is 10)
-              		null,    // show results? (default is true)
-              		null,    // create pushpin for what results? (ignored since what is null)
-              		null,    // use default disambiguation? (default is true)
-              		true,    // set best map view? (default is true)
-              		GeocodeCallback);  // call back function
-	}
-
-	function GeocodeCallback (shapeLayer, findResults, places, moreResults, errorMsg)
-	{
-
-   		// if there are no results, display any error message and return
-   		if(places == null)
-   		{
-     			alert( (errorMsg == null) ? "There were no results" : errorMsg );
-      			return;
-   		}
-
-   		var bestPlace = places[0];
-
-		// Add pushpin to the *best* place
-		locLatLong = bestPlace.LatLong;
-   		PushPin();
-
-		map.SetMapStyle(VEMapStyle.Hybrid);
-		map.SetZoomLevel(17);
-	}
-
-	function PushPin()
-	{
-		var newShape = new VEShape(VEShapeType.Pushpin, locLatLong);
-   		newShape.SetDescription(locAddress);
-   		newShape.SetTitle(locname);
-   		map.AddShape(newShape);
-	}
-
-	function UnloadMap()
-       	{
-	       	if (map != null)
-		{
-              	 map.Dispose();
-            	}
-        }
-
-      </script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -310,53 +226,9 @@ of the pushpin icon. Click 'road' at the top of the map if you would rather see 
   js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&appId=245689598824091";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+</td>
 </tr>
 </table>
-
-    <td width="4">&nbsp;</td>
-        <td width="300" valign="top"><br />
-<br>
-<script type="text/javascript">
-<!--
-google_ad_client = "ca-pub-4381933694964226";
-
-/* usa-churches 300 x 250*/
-
-google_ad_slot = "1740636993";
-
-google_ad_width = 300;
-
-google_ad_height = 250;
-
-//-->
-</script>
-
-<script type="text/javascript">
-
-
-</script></td>
-	</td>
-	<td width="6">&nbsp;</td>
-  </tr>
-  <tr><td colspan="6"></td></tr>
-  <tr>
-    <td width="240">&nbsp;</td>
-    <td width="35">&nbsp;</td>
-    <td width="364">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-4381933694964226";
-/* usa-churches 336 x 280*/
-google_ad_slot = "3217370190";
-google_ad_width = 336;
-google_ad_height = 280;
-//-->
-</script>
-<script type="text/javascript">
-</script>
-    </td>
-  </tr>
-
-  <tr>
   <tr><td colspan="7"><hr></td></tr>
   <tr>
     <td width="240">&nbsp;</td>
@@ -369,4 +241,4 @@ google_ad_height = 280;
   </tr>
 </table>
 </body>
-</html>
+</html> 
