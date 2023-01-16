@@ -179,7 +179,7 @@ h2
 	background:#efefef;
 	width:100%;
 	float:left;
-	padding-top:30px !important;
+	padding-top:5px !important;
 }
 .map-container a
 {
@@ -706,8 +706,8 @@ font-family: 'roboto_condensedlight';
 	background:#efefef;
 	width:100%;
 	float:left;
-	padding-top:148px !important;
-	padding-bottom:40px !important;
+	padding-top:20px !important;
+	padding-bottom:0px !important;
 }
 .inner-top-container a
 {
