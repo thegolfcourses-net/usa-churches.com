@@ -66,7 +66,7 @@ img
 	text-align:center;
 	  font-family: 'robotobold';
 	  font-size:18px;
-	/*position:fixed;*/ /* When fixed, it makes the state dropdown at the top get partially covered by the rest of the content*/
+	/*position:fixed; /* When fixed, it makes the state dropdown at the top get partially covered by the rest of the content*/
 	 
 }
 .header-container a
@@ -785,6 +785,12 @@ font-family: 'roboto_condensedlight';
 	float:left;
 	margin-bottom:50px;
 }
+.sidebar-google
+{
+	width:100%;
+	float:left;
+	margin-bottom:50px;	
+}
 .sidebar ul
 {
 	padding:0px;
@@ -970,7 +976,7 @@ color:#000;
 }
 .submit-btn
 {
-	background:#ffb300;
+	background:#a3b6bf;
 	font-size:18px;
 	font-weight:800;
 	display:inline-block;
@@ -985,7 +991,7 @@ input[type="submit"]:disabled
 }
 .submit-small-btn
 {
-	background:#ffb300;
+	background:#a3b6bf;
 	font-size:17px;
 	font-weight:800;
 	display:inline-block;
