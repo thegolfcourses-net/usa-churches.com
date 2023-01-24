@@ -12,6 +12,7 @@ img, img:hover
 
 body
 {
+	display:grid;
 	padding:0px;
 	margin:0px;
 	color:#313131;
@@ -755,7 +756,7 @@ font-family: 'roboto_condensedlight';
 }
 .heading-bg.toggle_state .fa-minus-circle
 {
-	display: none ;
+	display: none;
 }
 @media (max-width: 767px) {
 	.col-sm-3
@@ -825,6 +826,10 @@ font-family: 'roboto_condensedlight';
 
 	background:#ffb300;
 	text-decoration:none;
+}
+.city-nav
+{
+  padding-top:5px;	
 }
 .city-nav ul
 {
