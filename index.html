@@ -2678,6 +2678,24 @@ Copyright © 2011-<script type="text/javascript">document.write(YEAR)</script> u
     </div>
   </div>
 </div>
+
+                <script src="/js/jquery.rwdImageMaps.min.js"></script>
+<script type='text/javascript'>  
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	$('.state-select-mobile').change(function()
+	{
+		if($(this).val()!='')
+		{
+			
+			window.location.href=$(this).val();
+		}
+		
+	})
+});
+
+</script>
+
 <style type="text/css">
 	#us-map{
 	  display: block;
