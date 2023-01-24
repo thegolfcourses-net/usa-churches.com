@@ -31,7 +31,18 @@ window.open(theURL,winName,features);
 
 
 </script>
-
+<style type="text/css">
+  only screen and (max-device-width: 790px) {
+    #headerText > td {display: none;}
+    td#logo {display: block; height: 70px;}
+    td#logo > img {position:absolute; left: 0px; top: 0px; width:100%;}
+    #tagline {width: 100%;}
+    #navbar > :first-child {display: none;}
+  #navigation {display: none;} 
+  .cityNames {padding: 20px; font-size:20px;}
+    body > table > tbody > tr > td + td + td + td {display: none;}
+}
+</style>
 <script language="JavaScript" type="text/javascript">
 //--------------- LOCALIZEABLE GLOBALS ---------------
 var d=new Date();
@@ -136,7 +147,7 @@ var YEAR = d.getFullYear();
     <div class="container">
       <div class="navbar-header">
      
- 
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
          <a class="navbar-brand" href="#">Menu</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
