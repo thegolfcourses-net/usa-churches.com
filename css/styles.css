@@ -744,9 +744,9 @@ font-family: 'roboto_condensedlight';
 .heading-bg
 {
 	background:#32405b;
-	font-size:18px;
+	font-size:16px;
 	color:#fff;
-	padding:10px 20px 10px 20px;
+	padding:10px 20px 10px 5px;
 	clear:both;
 }
 .heading-bg i
@@ -813,7 +813,7 @@ font-family: 'roboto_condensedlight';
 {
 	color:#313131;
 	font-weight:800;
-	font-size:17px;
+	font-size:14px;
 		padding:8px 2%;
 		width:100%;
 		float:left;
