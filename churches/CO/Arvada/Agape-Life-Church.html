@@ -35,6 +35,52 @@
     body > table > tbody > tr > td + td + td + td {display: none;}
 }
 </style>
+
+    <script type='text/javascript'>
+    var map, searchManager;
+
+    function GetMap() {
+        map = new Microsoft.Maps.Map('#myMap', {
+            credentials: 'AgSuYz1NbNy8neXWsPyAqFpDZZ-GhKdlgtqBv_K5Naeyv0u_nM_Zf6m-x6HdhXdW'
+        });
+
+        //Make a request to geocode the address of this church.
+        geocodeQuery("5970 W 60th Ave, Arvada, CO 80003");
+    }
+
+    function geocodeQuery(query) {
+        //If search manager is not defined, load the search module.
+        if (!searchManager) {
+            //Create an instance of the search manager and call the geocodeQuery function again.
+            Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
+                searchManager = new Microsoft.Maps.Search.SearchManager(map);
+                geocodeQuery(query);
+            });
+        } else {
+            var searchRequest = {
+                where: query,
+                callback: function (r) {
+                    //Add the first result to the map and zoom into it.
+                    if (r && r.results && r.results.length > 0) {
+                        var pin = new Microsoft.Maps.Pushpin(r.results[0].location);
+                        map.entities.push(pin);
+
+                        map.setView({ bounds: r.results[0].bestView });
+                    }
+                },
+                errorCallback: function (e) {
+                    //If there is an error, alert the user about it.
+                    alert("No results found.");
+                }
+            };
+
+            //Make the geocode request.
+            searchManager.geocode(searchRequest);
+        }
+    }
+    </script>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+
 <script language="JavaScript" type="text/javascript">
 //--------------- LOCALIZEABLE GLOBALS ---------------
 var d=new Date();
@@ -241,6 +287,7 @@ var YEAR = d.getFullYear();
 5970 W 60th Ave<br>
 Arvada, CO, 80003<br>
 303-431-6481
+<div id="myMap" style="position:relative;width:480px;height:400px;"></div>
 <div class="container" style="margin-top:20px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4381933694964226"
      crossorigin="anonymous"></script>
