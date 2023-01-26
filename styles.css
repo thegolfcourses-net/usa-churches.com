@@ -1468,7 +1468,7 @@ display:inherit;
 }
 @media (max-device-width: 767px) {
 .banner {
-background: url(./images/480Banner.jpg) no-repeat center center; 
+background: url(./images/banner1.png) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
