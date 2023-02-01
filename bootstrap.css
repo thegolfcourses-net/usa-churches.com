@@ -4134,7 +4134,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   content: "/\00a0";
 }
 .breadcrumb > .active {
-  color: #ffb300;
+  color: #101010;
 }
 .pagination {
   display: inline-block;
